@@ -46,11 +46,11 @@ export const Todo = ({ item, setTodos }: TodoProps) => {
 const styles = StyleSheet.create({
   todo: {
     padding: 16,
-    margin: 16,
     borderRadius: 10,
     borderWidth: 1,
     borderStyle: "dotted",
     borderColor: "#bbb",
+    marginVertical: 16
   },
   utils: {
     display: "flex",

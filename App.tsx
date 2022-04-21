@@ -30,15 +30,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Abdulkarim's TODO APP</Text>
+      
       <View style={styles.body}>
-        <FlatList
-          scrollEnabled
-          data={todos}
-          renderItem={({ item }) => (
-            <Todo item={item} setTodos={setTodos}/>
-          )}
-        />
-        <TextInput
+      <TextInput
           style={styles.input}
           placeholder="Add todo"
           value={newTodo}
@@ -48,6 +42,14 @@ export default function App() {
         <TouchableHighlight onPress={createTodo}>
           <Text style={styles.button}>Add Todo</Text>
         </TouchableHighlight>
+        <FlatList
+          scrollEnabled
+          data={todos}
+          renderItem={({ item }) => (
+            <Todo item={item} setTodos={setTodos}/>
+          )}
+        />
+        
       </View>
       <StatusBar style="auto" />
     </View>
@@ -76,19 +78,18 @@ const styles = StyleSheet.create({
     margin: 0,
   },
   input: {
-    borderWidth: 1,
-    borderRadius: 7,
-    borderColor: "#777",
+    borderBottomWidth: 3,
     padding: 5,
     marginVertical: 10,
     marginHorizontal: 20,
   },
   button: {
-    backgroundColor: "green",
+    backgroundColor: "coral",
     borderRadius: 5,
     padding: 5,
     textAlign: "center",
-    color: "#fff"
+    color: "#fff",
+    
   },
   
 });
